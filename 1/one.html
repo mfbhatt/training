@@ -6,6 +6,45 @@
     <title>Document</title>
   </head>
   <body>
-    ASDF
+    <h1>This is a heading</h1>
+    <p>This is a paragraph.</p>
+
+    <canvas id="myCanvas"> Your browser does not support the canvas tag. </canvas>
+
+    <table>
+      <tr>
+        <th>Month</th>
+        <th>Savings</th>
+      </tr>
+      <tr>
+        <td>January</td>
+        <td>$100</td>
+      </tr>
+      <tr>
+        <td>February</td>
+        <td>$50</td>
+      </tr>
+      <caption>
+        Monthly savings
+      </caption>
+    </table>
+
+    <input type="button" value="Click me" onclick="openDialog()" />
+
+    <dialog>This is an open dialog window
+      <button onclick="this.parentElement.close()">Close</button>
+    </dialog>
   </body>
+
+  <script>
+    let canvas = document.getElementById("myCanvas");
+    let ctx = canvas.getContext("2d");
+    ctx.fillStyle = "#00FF00";
+    ctx.font = "48px serif";
+    ctx.fillText("Hello world", 10, 50);
+
+    function openDialog() {
+      document.querySelector("dialog").showModal();
+    }
+  </script>
 </html>
