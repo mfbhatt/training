@@ -42,8 +42,8 @@
         ctx.lineWidth = 2;
         ctx.beginPath();
 
-        for (var i = 0; i < existingLines.length; ++i) {
-          var line = existingLines[i];
+        for (const element of existingLines) {
+          var line = element;
           ctx.moveTo(line.startX, line.startY);
           ctx.lineTo(line.endX, line.endY);
         }
@@ -116,5 +116,6 @@
         draw();
       };
     </script>
+    <a href="Password.html">next</a>
   </body>
 </html>
