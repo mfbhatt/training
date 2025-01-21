@@ -5,7 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Home Page</title>
-    <script></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var select = document.querySelector(".select");
+        select.addEventListener("change", function (event) {
+          var value = event.target.value;
+          if (value === "1") {
+            window.location.href = "elec.html";
+          } else if (value === "2") {
+            window.location.href = "clothing.html";
+          } else if (value === "8") {
+            window.location.href = "appliances.html";
+          } else if (value === "3") {
+            window.location.href = "books.html";
+          }
+        });
+      });
+    </script>
     <style>
       .h2 {
         margin-left: 50px;
@@ -44,15 +60,13 @@
     </div>
 
     <hr />
+
     <select class="select">
       <option disabled selected hidden><--Select an option--></option>
       <option value="1">Electronics</option>
       <option value="2">Clothing</option>
-      <option value="3">Footwear</option>
-      <option value="4">Books</option>
-      <option value="6">Stationary</option>
-      <option value="7">Car Accessories</option>
       <option value="8">Home Appliances</option>
+      <option value="3">Books</option>
     </select>
     <table style="border: 5px solid; width: 100%">
       <thead>
